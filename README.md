@@ -1,20 +1,50 @@
-<<<<<<< HEAD
-# h1d023104_tugas6
+Simon Dimas Pramudya
+H1D023104
+Shift Asal G
+Shift Akhir D
 
-A new Flutter project.
 
-## Getting Started
+# H1D023104_Tugas 6
 
-This project is a starting point for a Flutter application.
+Setelah menuliskan input di bagian ini di halaman Form
 
-A few resources to get you started if this is your first Flutter project:
+final TextEditingController nama = TextEditingController();
+final TextEditingController nim = TextEditingController();
+final TextEditingController tanggal = TextEditingController();
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+User mengirim data dengan
+Navigator.push(context, MaterialPageRoute(
+  builder: (context) => TampilData(
+    nama: nama.text,
+    nim: nim.text,
+    tanggalLahir: tanggal.text,
+  ),
+));
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-=======
-# PraktikumMobile2
->>>>>>> da8b5030bc58a34f838b1dfcf6026363c41da4cc
+Di halaman tampilan data akan berisikan
+
+final String nama;
+final String nim;
+final String tanggalLahir;
+
+untuk menerima data dari input halaman sebelumnya
+Menghitung umur dengan ini
+
+int hitungUmur(String tgl) {
+  DateTime lahir = DateTime.parse(tgl);
+  DateTime now = DateTime.now();
+  int umur = now.year - lahir.year;
+  if (now.month < lahir.month || (now.month == lahir.month && now.day < lahir.day)) {
+    umur--;
+  }
+  return umur;
+}
+
+Yang hasil perhitungan disimpan di int umur = hitungUmur(tanggalLahir);
+Dan ditampilkan melalui
+Text(
+  "Halo, nama saya $nama\n"
+  "NIM: $nim\n"
+  "Umur saya: $umur tahun",
+)
+
