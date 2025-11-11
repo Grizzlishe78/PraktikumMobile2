@@ -13,6 +13,7 @@ final TextEditingController nim = TextEditingController();
 final TextEditingController tanggal = TextEditingController();
 
 User mengirim data dengan
+
 Navigator.push(context, MaterialPageRoute(
   builder: (context) => TampilData(
     nama: nama.text,
