@@ -1,7 +1,7 @@
-Simon Dimas Pramudya
-H1D023104
-Shift Asal G
-Shift Akhir D
+Simon Dimas Pramudya <br>
+H1D023104 <br>
+Shift Asal G <br>
+Shift Akhir D <br>
 
 
 # H1D023104_Tugas 6
